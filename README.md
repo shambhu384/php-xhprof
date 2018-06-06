@@ -24,7 +24,10 @@ tideways_xhprof_enable();
 
 
 $data = tideways_xhprof_disable();
+
 file_put_contents(
-    sys_get_temp_dir() . "/xhprof" . time() . ".yourapp.xhprof",
-    serialize($data)
+   
+   sys_get_temp_dir() . "/xhprof" . time() . ".yourapp.xhprof",
+   
+   serialize($data)
 );
