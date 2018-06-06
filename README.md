@@ -17,17 +17,20 @@ $ mkdir /tmp/xhprof
 $ sudo chmod -R 0777 /tmp/xhprof
 
 
-// enable xhprof in you app
-tideways_xhprof_enable();
+  ```php
 
-// load your application
+   // enable xhprof in you app
+   tideways_xhprof_enable();
+
+   // load your application
 
 
-$data = tideways_xhprof_disable();
+   $data = tideways_xhprof_disable();
 
-file_put_contents(
-   
-   sys_get_temp_dir() . "/xhprof" . time() . ".yourapp.xhprof",
-   
-   serialize($data)
-);
+   file_put_contents(
+
+      sys_get_temp_dir() . "/xhprof" . time() . ".yourapp.xhprof",
+
+      serialize($data)
+   );
+   ```
